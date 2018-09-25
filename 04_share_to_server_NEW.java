@@ -36,6 +36,7 @@ pipeline {
 			steps {	
 				script {	
 					print "Starting script...!"
+					print "feature 3"
 					if (Module_UserChoice == "Select module..." || Module_UserChoice == "") {
 						print " ========> No module/component selected - EXITING!"
 						currentBuild.result = 'FAILURE'
