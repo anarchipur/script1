@@ -35,7 +35,7 @@ pipeline {
 		stage("Input Check") {
 			steps {	
 				script {	
-
+					print "Starting script...!"
 					if (Module_UserChoice == "Select module..." || Module_UserChoice == "") {
 						print " ========> No module/component selected - EXITING!"
 						currentBuild.result = 'FAILURE'
@@ -78,7 +78,7 @@ pipeline {
 						Obj o = new Obj()
 						o.myPrint()
 						
-						
+						print "Starting Wintraui...!"
 						//check the user selection
 						if (Distribution_UserChoice== "dev  (share) -> dev  Server") {
 							source_share = "dev"
